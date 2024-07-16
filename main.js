@@ -4,20 +4,29 @@ const container = document.querySelector(".grid-container");
 // const cells = container.querySelectorAll(".cell");
 // console.log(cells)
 const reset = document.querySelector("#reset")
+const erase = document.querySelector("#erase")
 
-document.addEventListener('DOMContentLoaded', defaultGrid)
+document.addEventListener('DOMContentLoaded', () => {
+    defaultGrid();
+    addColor();
+})
+    
 function defaultGrid() {
     const cellNumber = 16
     generateGrid(cellNumber)
 }
 
-input.addEventListener('submit', updateGrid)
+input.addEventListener('submit', (event) => {
+    updateGrid(event);
+    addColor();
+})
 function updateGrid(event) {
     event.preventDefault()
 
     let cellNumber = +(event.target[0].value)
     container.innerHTML = ""
     generateGrid(cellNumber)
+    
 }
 
 function generateGrid(cellNumber) {
@@ -35,12 +44,41 @@ function generateGrid(cellNumber) {
     }
 }
 
-document.addEventListener('DOMContentLoaded',() => {
-    const cells = container.querySelectorAll(".cell")
+// document.addEventListener('DOMContentLoaded',() => {
+//     const cells = container.querySelectorAll(".cell");
+//     cells.forEach(cell => {
+//         cell.addEventListener('mouseover', () => {
+//             cell.style.backgroundColor = "blue"
+//         })
+//     })
+// })
+// const cells = container.querySelectorAll(".cell");
+function addColor() {
+    const cells = container.querySelectorAll(".cell");
     cells.forEach(cell => {
         cell.addEventListener('mouseover', () => {
             cell.style.backgroundColor = "blue"
         })
     })
-})
+}
+
+reset.addEventListener('click', resetGrid)
+function resetGrid() {
+    const cells = container.querySelectorAll(".cell");
+    cells.forEach((cell) => {
+        
+            cell.style.backgroundColor = "";
+        });
+    
+}
+
+function removeColor() {
+    const cells = container.querySelectorAll(".cell");
+    cells.forEach((cell) => {
+        cell.addEventListener("mouseover", () => {
+            cell.style.backgroundColor = "";
+        });
+    });
+}
+erase.addEventListener('click', removeColor)
 
