@@ -2,6 +2,7 @@ const input = document.querySelector(".form");
 const container = document.querySelector(".grid-container");
 const reset = document.querySelector("#reset")
 const erase = document.querySelector("#erase")
+const random = document.querySelector("#random")
 
 document.addEventListener('DOMContentLoaded', () => {
     defaultGrid();
@@ -42,6 +43,7 @@ function generateGrid(cellNumber) {
 }
 
 function addColor(color) {
+    // color = generateRandomColor()
     const cells = container.querySelectorAll(".cell");
     cells.forEach(cell => {
         cell.addEventListener('mouseover', () => {
@@ -74,4 +76,18 @@ const colorPicker = document.querySelector("#colorPicker")
 colorPicker.addEventListener('change', () => {
     let color = colorPicker.value
     addColor(color)
+})
+
+const hexCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
+function generateRandomColor() {
+    let hexColor = "#"
+    for (let i = 0; i < 6; i++) {
+        const randomPosition = Math.floor(Math.random() * hexCharacters.length)
+        hexColor += hexCharacters[randomPosition]
+    }
+    return hexColor
+}
+random.addEventListener('click', () => {
+    randomColor = generateRandomColor()
+    addColor(randomColor)
 })
