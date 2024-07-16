@@ -30,3 +30,10 @@ function generateGrid(cellNumber) {
         container.appendChild(cell);
     }
 }
+
+const cells = document.querySelector(".grid-container")
+cells.addEventListener('mouseover', addColor)
+function addColor(event) {
+    const cell = event.target
+    cell.style.backgroundColor = 'blue'
+}
