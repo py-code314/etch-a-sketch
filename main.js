@@ -3,10 +3,11 @@ const container = document.querySelector(".grid-container");
 const reset = document.querySelector("#reset")
 const erase = document.querySelector("#erase")
 const random = document.querySelector("#random")
+const multiColor = document.querySelector("#multicolor");
 
 document.addEventListener('DOMContentLoaded', () => {
     defaultGrid();
-    addColor();
+    // addColor();
 })
     
 function defaultGrid() {
@@ -16,7 +17,7 @@ function defaultGrid() {
 
 input.addEventListener('submit', (event) => {
     updateGrid(event);
-    addColor();
+    // addColor();
 })
 function updateGrid(event) {
     event.preventDefault()
@@ -51,6 +52,17 @@ function addColor(color) {
         })
     })
 }
+
+function addMultiColor() {
+    const cells = container.querySelectorAll(".cell");
+    cells.forEach((cell) => {
+        cell.addEventListener("mouseover", () => {
+            let color = generateRandomColor()
+            cell.style.backgroundColor = color;
+        });
+    });
+}
+multiColor.addEventListener("click", addMultiColor);
 
 reset.addEventListener('click', resetGrid)
 function resetGrid() {
@@ -91,3 +103,4 @@ random.addEventListener('click', () => {
     randomColor = generateRandomColor()
     addColor(randomColor)
 })
+
