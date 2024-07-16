@@ -1,8 +1,5 @@
 const input = document.querySelector(".form");
 const container = document.querySelector(".grid-container");
-// console.log(container)
-// const cells = container.querySelectorAll(".cell");
-// console.log(cells)
 const reset = document.querySelector("#reset")
 const erase = document.querySelector("#erase")
 
@@ -44,20 +41,11 @@ function generateGrid(cellNumber) {
     }
 }
 
-// document.addEventListener('DOMContentLoaded',() => {
-//     const cells = container.querySelectorAll(".cell");
-//     cells.forEach(cell => {
-//         cell.addEventListener('mouseover', () => {
-//             cell.style.backgroundColor = "blue"
-//         })
-//     })
-// })
-// const cells = container.querySelectorAll(".cell");
-function addColor() {
+function addColor(color) {
     const cells = container.querySelectorAll(".cell");
     cells.forEach(cell => {
         cell.addEventListener('mouseover', () => {
-            cell.style.backgroundColor = "blue"
+            cell.style.backgroundColor = color
         })
     })
 }
@@ -82,3 +70,8 @@ function removeColor() {
 }
 erase.addEventListener('click', removeColor)
 
+const colorPicker = document.querySelector("#colorPicker")
+colorPicker.addEventListener('change', () => {
+    let color = colorPicker.value
+    addColor(color)
+})
