@@ -1,5 +1,9 @@
 const input = document.querySelector(".form");
 const container = document.querySelector(".grid-container");
+// console.log(container)
+// const cells = container.querySelectorAll(".cell");
+// console.log(cells)
+const reset = document.querySelector("#reset")
 
 document.addEventListener('DOMContentLoaded', defaultGrid)
 function defaultGrid() {
@@ -31,9 +35,12 @@ function generateGrid(cellNumber) {
     }
 }
 
-const cells = document.querySelector(".grid-container")
-cells.addEventListener('mouseover', addColor)
-function addColor(event) {
-    const cell = event.target
-    cell.style.backgroundColor = 'blue'
-}
+document.addEventListener('DOMContentLoaded',() => {
+    const cells = container.querySelectorAll(".cell")
+    cells.forEach(cell => {
+        cell.addEventListener('mouseover', () => {
+            cell.style.backgroundColor = "blue"
+        })
+    })
+})
+
