@@ -23,7 +23,7 @@ Etch A Sketch is a classic drawing toy that allows users to create artwork by ma
   
 
 ## Screenshots
-![Choose a Color Mode](./images/choose-a-color.png "Choose a Color Mode")![Random Color Mode](./images/random-color.png "Random Color Mode")![Rainbow Color Mode](./images/rainbow.png "Rainbow Color Mode")![Light to Dark Color Mode](./images/chiaroscuro.png "Light to Dark Color Mode")
-
+![Choose a Color Mode](./images/choose-a-color.png "Choose a Color Mode" =50%x)![Random Color Mode](./images/random-color.png "Random Color Mode" =50%x)
+![Rainbow Color Mode](./images/rainbow.png "Rainbow Color Mode" =50%x)![Light to Dark Color Mode](./images/chiaroscuro.png "Light to Dark Color Mode" =50%x)
 ## Credits
 * Many thanks to Paul Salentiny from [CSS Patterns Gallery](https://projects.verou.me/css3patterns/#pyramid) for the textured background pattern.
