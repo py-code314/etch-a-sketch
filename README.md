@@ -24,11 +24,11 @@ Etch A Sketch is a classic drawing toy that allows users to create artwork by ma
 
 ## Screenshots
 <p>
-    <img src="./images/chiaroscuro.png" width="40%" hspace="10" >
-    <img src="./images/choose-a-color.png" width="40%" hspace="10" >
+    <img src="./images/chiaroscuro.png" width="45%" hspace="10" >
+    <img src="./images/choose-a-color.png" width="45%" hspace="10" >
     <p>
-    <img src="./images/rainbow.png" width="40%" hspace="10" >
-    <img src="./images/random-color.png" width="40%" hspace="10" >
+    <img src="./images/rainbow.png" width="45%" hspace="10" >
+    <img src="./images/random-color.png" width="45%" hspace="10" >
 </p>
 
 
