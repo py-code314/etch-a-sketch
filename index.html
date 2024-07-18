@@ -9,8 +9,9 @@
 </head>
 <body>
     <div class="header">
+        <!--Page title-->
         <h1>Etch A Sketch<sup>®</sup></h1>
-
+        <!--Form to set grid size-->
         <form class="form">
             <label>Please pick your grid size: <input type="number" min="16" max="100"></label>
             <button type="submit">Submit</button>
@@ -18,9 +19,12 @@
     </div>
     
     <div class="container">
+        <!--Grid section-->
         <div class="outer-container">
             <div class="grid-container"></div>
         </div>
+
+        <!--Buttons section-->
         <div class="buttons-container">
             <p class="modes">Choose a Mode <span class="hand">👇🏼</span></p> 
             <button class="mode-btn" id="color">Choose a Color <input type="color" id="colorPicker" value="#ffaa00"></button>
@@ -31,8 +35,5 @@
             <button class="mode-btn" id="reset">Reset</button>
         </div>
     </div>
-    
-    
-
 </body>
 </html>
